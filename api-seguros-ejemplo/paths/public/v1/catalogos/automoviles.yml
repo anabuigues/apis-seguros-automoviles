@@ -1,0 +1,46 @@
+get:
+  tags:
+    - Autos
+  summary: Lista automóviles
+  description: Lista automóviles
+  operationId: listAutos
+  parameters:
+    - name: marca
+      in: query
+      required: false
+      description: Filtra por marca
+      schema:
+        type: string
+      example: Ford
+    - name: modelo
+      in: query
+      required: false
+      description: Filtra por modelo
+      schema:
+        type: string
+      example: Mustang
+    - name: limit
+      in: query
+      required: false
+      description: número máximo de elementos a obtener
+      schema:
+        type: integer
+      example: 10
+    - name: ofset
+      in: query
+      required: false
+      description: elemento a partir del cual obtener más elementos
+      schema:
+        type: integer
+      example: 100
+  responses:
+    '200':
+      description: Coleción de automóviles
+      content:
+        application/json:
+          schema:
+            $ref: '../../../../components/_index.yml#/schemas/Commons.Automovil__listResponse'
+    '400':
+      $ref: '../../../../components/_index.yml#/responses/BadRequestResponse'
+    '500':
+      $ref: '../../../../components/_index.yml#/responses/InternalServerErrorResponse'

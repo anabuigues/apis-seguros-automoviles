@@ -1,0 +1,23 @@
+type: object
+additionalProperties: false
+required:
+  - tipo_forma_pago
+  - iban
+  - titular
+properties:
+  tipo_forma_pago:
+    type: string
+    enum:
+      [
+        CuentaBancaria
+      ]
+  iban:
+    type: string
+    description: |
+      IBAN de la cuenta
+    example: 568905843234234
+  titular:
+    type: string
+    description: |
+      titular de la tarjeta de crédito
+    example: Matias Prats Junior

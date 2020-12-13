@@ -1,0 +1,73 @@
+type: object
+additionalProperties: false
+required:
+  - nombre
+  - apellidos
+  - sexo
+  - fecha_nacimiento
+  - email
+  - password
+  - documento_identificacion
+  - fecha_expecidion_carnet
+  - direccion
+properties:
+  id:
+    type: string
+    description: |
+      Identificador interno de la persona. Autogenerado
+    example: 2342adfadf234
+  nombre:
+    type: string
+    description: |
+      Nombre de la persona
+    example: Matias
+  apellidos:
+    type: string
+    description: |
+      Apellidos de la persona
+    example: Prats
+  sexo:
+    type: string
+    enum: [MUJER,HOMBRE,NA]
+    description: |
+      Apellidos de la persona
+    example:
+      Prats Jr
+  fecha_nacimiento:
+    type: string
+    format: date
+    description: |
+      Fecha de nacimiento de la persona
+    example: '2000-01-30'
+  email:
+    type: string
+    format: email
+    description: |
+      Email
+    example:
+      matias.prats.jr@foo.var
+  password:
+    type: string
+    format: password
+    description: |
+      pasword
+    example:
+      A3334()%asdfa55234srewrw$$$
+  documento_identificacion:
+    $ref: '../_index.yml#/schemas/Partials.DocumentoIdentificacion'
+  fecha_expecidion_carnet:
+    type: string
+    format: date
+    description: |
+      Fecha de nacimiento de la persona
+    example: '2019-01-30'
+  direccion:
+    $ref: '../_index.yml#/schemas/Partials.Direccion'
+
+      
+
+  
+
+
+  
+  

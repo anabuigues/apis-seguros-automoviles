@@ -1,0 +1,22 @@
+type: object
+additionalProperties: false
+required:
+  - tipo
+  - pais_expedicion
+  - id
+properties:
+  pais_expedicion:
+    type: string
+    enum:
+      [
+        ESPANA
+      ]
+  id:
+    type: string
+    description: |
+      Identificador acorde al tipo de documento
+    example: 56890584Z
+      
+
+# Se podría optar por usar una estrategia oneof donde cada tipo de dirección tiene se discrimina en base al paísde manera que se puede solictar más
+# o menos información y se pueden indicar los validadores. Por simplicidad se ha optado por un enfoque para España

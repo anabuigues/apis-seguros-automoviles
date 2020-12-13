@@ -1,0 +1,63 @@
+type: object
+additionalProperties: false
+required:
+  - tipo
+  - pais_expedicion
+  - id
+properties:
+  tipo:
+    type: string
+    enum: 
+      [
+        DNI,
+        NIE,
+        PASAPORTE,
+      ]
+    description: |
+      Tipo de documento de identificación
+    example: 2342adfadf234
+  pais_expedicion:
+    type: string
+    enum:
+      [
+        ESPANA
+      ]
+  id:
+    type: string
+    description: |
+      Identificador acorde al tipo de documento
+    example: 56890584Z
+      
+
+# Se podría optar por usar una estrategia oneof donde cada tipo de documento usan el tipo como discriminador de manera que se puede solictar más
+# o menos información y se pueden indicar los validadores. Por simplicidad se ha optado por un enfoque 100% genérico
+# Si se desea el enfoque one of, quedaría similar a (no probado)
+# ---
+# oneOf:
+#   - $ref: '../_index.yml#/schemas/Partials.DNI_ESPANA'
+#   - $ref: '../_index.yml#/schemas/Partials.NIE_ESPANA'
+#   - $ref: '../_index.yml#/schemas/Partials.PASAPORTE_ESPANA'
+# discriminator:
+#   propertyName: tipo
+# y cada uno de las posibilidades sería un objeto donde el tipo debería coinicidir con el nombre del schema. Ejemplo para DNI_ESPANA
+
+# type: object
+# additionalProperties: false
+# required:
+#   - tipo
+#   - id
+# properties:
+#   tipo:
+#     type: string
+#     enum: 
+#       [
+#         DNI_ESPANA
+#       ]
+#     description: |
+#       Tipo de documento de identificación
+#     example: 2342adfadf234
+#   id:
+#     type: string
+#     description: |
+#       Identificador acorde al tipo de documento
+#     example: 56890584Z

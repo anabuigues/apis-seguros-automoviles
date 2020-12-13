@@ -1,0 +1,13 @@
+allOf:
+  - $ref: '../../_index.yml#/schemas/Partials.OffsetPagination'
+  - type: object
+    additionalProperties: false
+    required: 
+      - items
+    properties:
+      items:
+        type: array
+        description: |
+          Lista de automóviles acorde a los filtros aplicados
+        items:
+          $ref: '../../_index.yml#/schemas/Commons.Automovil__describeResponse'

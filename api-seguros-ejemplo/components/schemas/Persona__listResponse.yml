@@ -1,0 +1,11 @@
+type: object
+additionalProperties: false
+properties:
+  items:
+    type: array
+    description: |
+      Can not be modified. If not provided an UUID will be generated.
+      Unique identifier of the resource.
+    items:
+      $ref: '../../_index.yml#/schemas/Commons.Automovil__describeResponse'
+  

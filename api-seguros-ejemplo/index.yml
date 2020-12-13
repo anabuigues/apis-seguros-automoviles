@@ -1,0 +1,41 @@
+openapi: '3.0.0'
+
+info:
+  title: Contratación seguros
+  description: API ejemplo para contratación de seguros 
+  version: 1.0.0
+
+servers:
+  - url: http://localhost:8080
+    description: Local test
+
+tags:
+  - name: public
+    description: servicios públicos
+  - name: protected
+    description: servicios protegidos (requiren autenticación)
+  - name: Personas protected
+    description: Personas 
+
+x-tagGroups:
+  - name: Personas
+    tags:
+      - Personas
+      - Personas privado
+  - name: Pólizas
+    tags:
+      - Polizas
+      - Polizas privado
+      - Polizas interno
+  - name: Simulación
+    tags:
+      - Simulación
+  - name: Catálogos
+    tags:
+      - Autos
+     
+
+paths:
+  $ref: ./paths/_index.yml
+components:
+  $ref: ./components/_index.yml

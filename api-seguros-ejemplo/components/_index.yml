@@ -1,0 +1,73 @@
+schemas:
+  Partials.Error:
+    $ref: ./schemas/_partials/Error.yml
+  Partials.DocumentoIdentificacion:
+    $ref: ./schemas/_partials/DocumentoIdentificacion.yml
+  Partials.TarjetaDeCredito:
+    $ref: ./schemas/_partials/TarjetaDeCredito.yml
+  Partials.CuentaBancaria:
+    $ref: ./schemas/_partials/CuentaBancaria.yml
+  Partials.FormaDePago:
+    $ref: ./schemas/_partials/FormaDePago.yml
+  Partials.Direccion:
+    $ref: ./schemas/_partials/Direccion.yml
+  Partials.OffsetPagination:
+    $ref: ./schemas/_partials/OffsetPagination.yml
+  Partials.PaginationKeyPagination:
+    $ref: ./schemas/_partials/PaginationKeyPagination.yml
+  Simulacion__create:
+    $ref: ./schemas/Simulacion__create.yml
+  Simulacion__createResponse:
+    $ref: ./schemas/Simulacion__createResponse.yml
+  Simulacion__update:
+    $ref: ./schemas/Simulacion__update.yml
+  Simulacion__updateResponse:
+    $ref: ./schemas/Simulacion__updateResponse.yml
+  Simulacion__describeResponse:
+    $ref: ./schemas/Simulacion__describeResponse.yml
+  Persona__create:
+    $ref: ./schemas/Persona__create.yml
+  Persona__createResponse:
+    $ref: ./schemas/Persona__createResponse.yml
+  Persona__update:
+    $ref: ./schemas/Persona__update.yml
+  Persona__updateResponse:
+    $ref: ./schemas/Persona__updateResponse.yml
+  Persona__cambiarPassword:
+    $ref: ./schemas/Persona__cambiarPassword.yml
+  Persona__describeResponse:
+    $ref: ./schemas/Persona__describeResponse.yml
+  Poliza__create:
+    $ref: ./schemas/Poliza__create.yml
+  Poliza__createResponse:
+    $ref: ./schemas/Poliza__createResponse.yml
+  Poliza__deleteResponse:
+    $ref: ./schemas/Poliza__deleteResponse.yml
+  Poliza__update:
+    $ref: ./schemas/Poliza__update.yml
+  Poliza__updateResponse:
+    $ref: ./schemas/Poliza__updateResponse.yml
+  Poliza__listResponse:
+    $ref: ./schemas/Poliza__listResponse.yml
+  Poliza__describeResponse:
+    $ref: ./schemas/Poliza__describeResponse.yml
+  Commons.Automovil__describeResponse:
+    $ref: ./schemas/commons/Automovil__describeResponse.yml
+  Commons.Automovil__listResponse:
+    $ref: ./schemas/commons/Automovil__listResponse.yml
+responses:
+  BadRequestResponse:
+    $ref: ./responses/BadRequestResponse.yml
+  NotFoundResponse:
+    $ref: ./responses/NotFoundResponse.yml
+  InternalServerErrorResponse:
+    $ref: ./responses/InternalServerErrorResponse.yml
+securitySchemes:
+  jwtBearer:
+    type: http
+    scheme: bearer
+    bearerFormat: JWT 
+  jwtInternalBearer:
+    type: http
+    scheme: bearer
+    bearerFormat: JWT 

@@ -1,0 +1,52 @@
+put:
+  tags:
+    - Personas privado
+  security:
+    - jwtBearer: [] 
+  summary: Actualiza una persona
+  description: Actualiza la persona autenticada
+  operationId: actualizarPersona
+  requestBody:
+    description: Datos de la persona a actualizar
+    content:
+      application/json:
+        schema:
+          $ref: '../../../components/_index.yml#/schemas/Persona__update'
+  responses:
+    '200':
+      description: Persona actualizada correctamente.
+      content:
+        application/json:
+          schema:
+            $ref: '../../../components/_index.yml#/schemas/Persona__updateResponse'
+    '400':
+      $ref: '../../../components/_index.yml#/responses/BadRequestResponse'
+    '404':
+      $ref: '../../../components/_index.yml#/responses/NotFoundResponse'
+    '500':
+      $ref: '../../../components/_index.yml#/responses/InternalServerErrorResponse'
+post:
+  tags:
+    - Personas
+  summary: Crea una persona
+  description: Crea una persona.
+  operationId: crearPersona
+  requestBody:
+    description: Datos de la persona a crear
+    content:
+      application/json:
+        schema:
+          $ref: '../../../components/_index.yml#/schemas/Persona__create'
+  responses:
+    '200':
+      description: Persona creada correctamente.
+      content:
+        application/json:
+          schema:
+            $ref: '../../../components/_index.yml#/schemas/Persona__createResponse'
+    '400':
+      $ref: '../../../components/_index.yml#/responses/BadRequestResponse'
+    '404':
+      $ref: '../../../components/_index.yml#/responses/NotFoundResponse'
+    '500':
+      $ref: '../../../components/_index.yml#/responses/InternalServerErrorResponse'

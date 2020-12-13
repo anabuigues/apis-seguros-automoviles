@@ -1,0 +1,72 @@
+get:
+  tags:
+    - Polizas interno
+  security:
+    - jwtInternalBearer: [] 
+  summary: Lista las pólizas del sistema
+  description: Lista las pólizas del sistema
+  operationId: listarPolizasInterno
+  parameters:
+    - name: contratante_id
+      in: query
+      required: false
+      description: Filtra por identificador de contratante
+      schema:
+        type: string
+      example: AAggg3535AAAggNNN
+    - name: estado_de_pago
+      in: query
+      required: false
+      description: Filtra por el estado de pago
+      schema:
+        type: string
+      example: IMPAGADO
+    - name: pagination_key
+      in: query
+      required: false
+      description: Indicador para obtener la siguiente página de resultados
+      schema:
+        type: string
+      example: ABCD987565
+  responses:
+    '200':
+      description: Lista de pólizas del usuario
+      content:
+        application/json:
+          schema:
+            $ref: '../../../components/_index.yml#/schemas/Poliza__listResponse'
+    '400':
+      $ref: '../../../components/_index.yml#/responses/BadRequestResponse'
+    '404':
+      $ref: '../../../components/_index.yml#/responses/NotFoundResponse'
+    '500':
+      $ref: '../../../components/_index.yml#/responses/InternalServerErrorResponse'
+# Para contratar una póliza a nivel interno el contratante_id pasaría a ser un parámetro requerido ya que no se podría obtener de las 
+# credenciales
+# post:
+#   tags:
+#     - Polizas internal
+#   security:
+#     - jwtBearer: [] 
+#   summary: Contrata una póliza
+#   description: Contrata una póliza
+#   operationId: crearPolizaUsuario
+#   requestBody:
+#     description: Datos de la póliza a contratar
+#     content:
+#       application/json:
+#         schema:
+#           $ref: '../components/_index.yml#/schemas/Poliza_create'
+#   responses:
+#     '200':
+#       description: Persona creada correctamente.
+#       content:
+#         application/json:
+#           schema:
+#             $ref: '../components/_index.yml#/schemas/Poliza_getResponse'
+#     '400':
+#       $ref: '../components/_index.yml#/responses/BadRequestResponse'
+#     '404':
+#       $ref: '../components/_index.yml#/responses/NotFoundResponse'
+#     '500':
+#       $ref: '../components/_index.yml#/responses/InternalServerErrorResponse'

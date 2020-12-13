@@ -1,0 +1,46 @@
+type: object
+additionalProperties: false
+required:
+  - automovil_id
+  - fecha_matriculacion
+  - conductores_habituales
+properties:
+  id:
+    type: string
+    description: |
+      Identificador único de la simualción. Si no se proporciona se genera uno
+  automovil_id:
+    type: string
+    description: |
+      Identificador del automovil para el que se va a realizar al simulación
+    example: 'ADBDFTD3535ADFA'
+  fecha_matriculacion:
+    type: string
+    format: date
+    description: |
+      fecha matriculación del automóvil
+    example: '2015-01-30'
+  conductores_habituales:
+    type: array 
+    items: 
+      type: object
+      additionalProperties: false
+      required:
+        - fecha_nacimiento
+        - fecha_expecidicion_carnet
+      properties:
+        fecha_nacimiento:
+          type: string
+          format: date
+          description:
+            fecha nacimiento del condutor
+          example: '2000-01-30'
+        fecha_expecidicion_carnet:
+          type: string
+          format: date
+          description:
+            Fecha de expecición del carnet
+          example: '2018-03-25'
+    description: |
+      Conductores habituales 
+  

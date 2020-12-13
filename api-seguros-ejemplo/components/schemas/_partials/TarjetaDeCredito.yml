@@ -1,0 +1,29 @@
+type: object
+additionalProperties: false
+required:
+  - tipo_forma_pago
+  - numero_tarjeta
+  - cvv
+  - titular
+properties:
+  tipo_forma_pago:
+    type: string
+    enum:
+      [
+        TarjetaDeCredito
+      ]
+  numero_tarjeta:
+    type: string
+    description: |
+      Número de tarjeta de crédito
+    example: 568905843234234
+  cvv:
+    type: string
+    description: |
+      cvv de la tarjeta
+    example: 123
+  titular:
+    type: string
+    description: |
+      titular de la tarjeta de crédito
+    example: Matias Prats Junior

@@ -1,0 +1,18 @@
+'/public/v1/catalogos/automoviles':
+  $ref: ./public/v1/catalogos/automoviles.yml
+'/public/v1/simulaciones':
+  $ref: ./public/v1/simulaciones.yml
+'/public/v1/simulaciones/{id}':
+  $ref: ./public/v1/simulaciones_id.yml
+
+'/private/v1/polizas':
+  $ref: ./private/v1/polizas.yml
+'/private/v1/polizas/{id}':
+  $ref: ./private/v1/polizas_id.yml
+'/private/v1/personas':
+  $ref: ./private/v1/personas.yml
+'/private/v1/personas:cambiarPassword':
+  $ref: ./private/v1/personas__cambiarPassword.yml
+
+'/internal/v1/polizas':
+  $ref: ./internal/v1/polizas.yml

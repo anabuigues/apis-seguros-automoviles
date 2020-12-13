@@ -1,0 +1,23 @@
+type: object
+additionalProperties: false
+properties:
+  id:
+    type: string
+    description: |
+      Can not be modified. If not provided an UUID will be generated.
+      Unique identifier of the resource.
+  marca:
+    type: string
+    description: |
+      Marca del automóvil
+    example: 'Ford'
+  modelo:
+    type: string
+    description: |
+      modelo del automóvil
+    example: 'Mustang'
+  anyo:
+    type: string
+    description: |
+      año del modelo
+    example: '2020'

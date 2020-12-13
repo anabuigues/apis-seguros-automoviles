@@ -1,0 +1,11 @@
+allOf:
+  - $ref: '../_index.yml#/schemas/Partials.PaginationKeyPagination'
+  - type: object
+    additionalProperties: false
+    properties:
+      items:
+        type: array
+        items:
+          $ref: '../_index.yml#/schemas/Poliza__describeResponse'
+  
+  

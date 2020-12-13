@@ -1,0 +1,12 @@
+description: Recurso no encontrado.
+content:
+  application/json:
+    schema:
+      $ref: '../_index.yml#/schemas/Partials.Error'
+    example:
+      error:
+        code: 404
+        status: NOT_FOUND
+        error_id: 29
+        message: Simulación no encontrada
+        trace_id: '2699538f-00d9-4c58-b3a0-e0a6e1231f23'

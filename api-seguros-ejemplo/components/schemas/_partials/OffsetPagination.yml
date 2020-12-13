@@ -1,0 +1,26 @@
+type: object
+additionalProperties: false
+required:
+  - limit
+  - offset
+  - more_items
+properties:
+  limit:
+    type: integer
+    description: |
+      Número máximo de elementos a devolver. Este valor ha sido proporcionado en la petición o 
+      es el valor por defecto configurado en el sistema si no se ha proporcionado.
+    example: 10
+  offset:
+    type: integer
+    description: |
+      Elemento a partir del cual se empieza a contar para devolver elementos hasta llegar al último o
+      al limit. Este valor ha sido proporcionado en la petición o es el valor cero 
+    example: 1320
+  more_items:
+    type: boolean
+    description: |
+      Indica si hay más elementos a consultar en la colección. El elemento offest+limit+1 existe
+    example: true
+discriminator:
+  propertyName: todo

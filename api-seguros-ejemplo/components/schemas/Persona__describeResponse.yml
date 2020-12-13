@@ -1,0 +1,11 @@
+type: object
+additionalProperties: false
+properties:
+  id:
+    type: string
+    description: |
+      Persona id
+discriminator:
+  propertyName: todo
+  
+  

@@ -1,0 +1,12 @@
+description: Error con los datos de entrada de la petición. Argumento inválido o violación de unacondición de entrada para los parámetros proporcionados
+content:
+  application/json:
+    schema:
+      $ref: '../_index.yml#/schemas/Partials.Error'
+    example:
+      error:
+        code: 400
+        status: INVALID_ARGUMENT
+        error_id: 17
+        message: Importe inválido
+        trace_id: '2699538f-00d9-4c58-b3a0-e0a6e1231f23'

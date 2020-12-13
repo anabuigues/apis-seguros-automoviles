@@ -1,0 +1,5 @@
+oneOf:
+  - $ref: '../../_index.yml#/schemas/Partials.TarjetaDeCredito'
+  - $ref: '../../_index.yml#/schemas/Partials.CuentaBancaria'
+discriminator:
+  propertyName: tipo_forma_pago
