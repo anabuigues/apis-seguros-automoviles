@@ -34,8 +34,13 @@ post:
         schema:
           $ref: '../../../components/_index.yml#/schemas/Poliza__create'
   responses:
-    '200':
-      description: Persona creada correctamente.
+    '201':
+      description: Póliza creada correctamente.
+      headers:
+        Location:
+          schema:
+            type: string
+          description: Location
       content:
         application/json:
           schema:

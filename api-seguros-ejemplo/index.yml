@@ -8,14 +8,8 @@ info:
 servers:
   - url: http://localhost:8080
     description: Local test
-
-tags:
-  - name: public
-    description: servicios públicos
-  - name: protected
-    description: servicios protegidos (requiren autenticación)
-  - name: Personas protected
-    description: Personas 
+  - url: https://apis.example.com
+    description: Production server
 
 x-tagGroups:
   - name: Personas
@@ -32,8 +26,7 @@ x-tagGroups:
       - Simulación
   - name: Catálogos
     tags:
-      - Autos
-     
+      - Autos 
 
 paths:
   $ref: ./paths/_index.yml

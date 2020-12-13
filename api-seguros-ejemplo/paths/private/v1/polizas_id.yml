@@ -4,7 +4,7 @@ get:
   security:
     - jwtBearer: [] 
   summary: Obtiene el detalle de la póliza indicada
-  description: LObtiene el detalle de la póliza indicada. La póliza debe pertenecer al usuario autenticado
+  description: Obtiene el detalle de la póliza indicada. La póliza debe pertenecer al usuario autenticado
   operationId: obtenerDetallePolizaUsuario
   parameters:
     - name: id
@@ -16,7 +16,7 @@ get:
       example: adfadf23423423
   responses:
     '200':
-      description: Lista de pólizas del 
+      description: Detalle de la póliza
       content:
         application/json:
           schema:
@@ -51,7 +51,7 @@ put:
           $ref: '../../../components/_index.yml#/schemas/Poliza__update'
   responses:
     '200':
-      description: Persona actualizada correctamente.
+      description: Póliza actualizada correctamente.
       content:
         application/json:
           schema:

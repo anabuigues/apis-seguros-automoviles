@@ -29,7 +29,7 @@ post:
   tags:
     - Personas
   summary: Crea una persona
-  description: Crea una persona.
+  description: Crea una persona
   operationId: crearPersona
   requestBody:
     description: Datos de la persona a crear
@@ -38,8 +38,13 @@ post:
         schema:
           $ref: '../../../components/_index.yml#/schemas/Persona__create'
   responses:
-    '200':
-      description: Persona creada correctamente.
+    '201':
+      description: Persona creada correctamente
+      headers:
+        Location:
+          schema:
+            type: string
+          description: Location
       content:
         application/json:
           schema:

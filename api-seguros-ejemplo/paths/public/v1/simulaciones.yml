@@ -1,58 +1,23 @@
-# get:
-#   tags:
-#     - accounts
-#   summary: Lista simulaciones
-#   description: Lista simulaciones
-#   operationId: listAccounts
-#   parameters:
-#     - name: project
-#       in: path
-#       description: Project for this resource
-#       required: true
-#       schema:
-#         type: string
-#       example: fnality-local-uk
-#     - name: tokeniserId
-#       in: query
-#       required: false
-#       description: Tokeniser Identifier related to the Account.
-#       schema:
-#         type: string
-#       example: usc-gbp
-#   responses:
-#     '200':
-#       description: Obtains a collection of accounts
-#       content:
-#         application/json:
-#           schema:
-#             $ref: '../components/_index.yml#/schemas/AccountCollection'
-#     '400':
-#       $ref: '../components/_index.yml#/responses/BadRequestResponse'
-#     '500':
-#       $ref: '../components/_index.yml#/responses/InternalServerErrorResponse'
 post:
   tags:
     - Simulación
-  summary: Crea una simulación
+  summary: Crea una simulación.
   description: Crea una simulación.
   operationId: crearSimulacion
-  # parameters:
-  #   - name: project
-  #     in: path
-  #     description: Project for this resource
-  #     required: true
-  #     schema:
-  #       type: string
-  #     example: fnality-local-uk
   requestBody:
-    description: Datos de la simulación a realizar
+    description: Datos necesarios para realizar la simulación
     content:
       application/json:
         schema:
           $ref: '../../../components/_index.yml#/schemas/Simulacion__create'
   responses:
-    '200':
-      description: Resultado de la simulacion
+    '201':
+      description: Resultado de la simulación
+      headers:
+        Location:
+          schema:
+            type: string
+          description: Location
       content:
         application/json:
           schema:

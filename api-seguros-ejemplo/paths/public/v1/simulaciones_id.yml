@@ -2,7 +2,7 @@ get:
   tags:
     - Simulación
   summary: Obtiene el detalle de una simulación
-  description: Actualiza una Obtiene el detalle de una simulación.
+  description: Obtiene el detalle de una simulación.
   operationId: obtenerDetalleSimulacion
   parameters:
     - name: id
@@ -14,7 +14,7 @@ get:
       example: adfadf23423423
   responses:
     '200':
-      description: Resultado de la simulacion
+      description: Resultado de la simulación
       content:
         application/json:
           schema:
@@ -47,7 +47,7 @@ put:
           $ref: '../../../components/_index.yml#/schemas/Simulacion__update'
   responses:
     '200':
-      description: Resultado de la simulacion
+      description: Resultado de la simulación
       content:
         application/json:
           schema:

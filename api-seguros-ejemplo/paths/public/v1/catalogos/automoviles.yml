@@ -26,7 +26,7 @@ get:
       schema:
         type: integer
       example: 10
-    - name: ofset
+    - name: offset
       in: query
       required: false
       description: elemento a partir del cual obtener más elementos
