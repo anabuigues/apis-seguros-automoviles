@@ -10,4 +10,4 @@ properties:
       de resultados. Este valor no cambiará una vez devuleta la útlima página de resulados.
     example: 'ABCD0324324'
 discriminator:
-  propertyName: todo
+  propertyName: type

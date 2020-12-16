@@ -23,4 +23,4 @@ properties:
       Indica si hay más elementos a consultar en la colección. El elemento offest+limit+1 existe
     example: true
 discriminator:
-  propertyName: todo
+  propertyName: type

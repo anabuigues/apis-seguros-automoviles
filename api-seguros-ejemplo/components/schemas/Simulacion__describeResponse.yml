@@ -110,4 +110,4 @@ properties:
                 description: precio del seguro para la franquicia indicada
                 example: 650.76
 discriminator:
-  propertyName: todo
+  propertyName: type
